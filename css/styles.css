@@ -715,6 +715,11 @@ nav a {
     box-shadow: 0 30px 70px rgba(0,225,255,0.35);
 }
 
+.promo-cta-button a {
+    color: #00121a;
+    text-decoration: none;
+}
+
 @keyframes promoPulse {
   0% { transform: scale(1);
     opacity: 1;
