@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,16 +21,19 @@
             <div class="logo">
                 <i class="bi bi-controller"></i>
                 <h2>Game Pass Pro</h2>
-                <div class="links">
-                    <a href="">Home</a>
-                    <a href="#about-us">Quem Somos</a>
-                    <a href="#services-content">Serviços</a>
-                    <a href="#questions">Dúvidas</a>
-                    <a href="#promo-cta">Assine Agora</a>
-                </div>           
             </div>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menu">
+                <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+            <div class="links" id="primary-navigation" aria-hidden="true">
+                <a href="">Home</a>
+                <a href="#about-us">Quem Somos</a>
+                <a href="#services-content">Serviços</a>
+                <a href="#questions">Dúvidas</a>
+                <a href="#promo-cta">Assine Agora</a>
+            </div>           
             <div class="contact-phone">                
-                <a href="">Contato</a>
+                <a href="https://wa.me/+5511994214921" target="_blank" id="">Contato</a>
             </div>
         </nav>
     </header>
@@ -37,10 +41,8 @@
     <main>
         <section class="acess-game">
             <div class="info-title">
-                <h2>
-                    <span class="accent">Acesso Ilimitado</span>
-                    <span class="main-line">aos Melhores Jogos</span>
-                </h2>
+                <h2>Acesso Ilimitado</h2>
+                <span class="main-line">aos Melhores Jogos</span>
                 <p>Assine nosso Game Pass e tenha acesso a centenas de jogos para PC, console e mobile. Jogue quando quiser, onde quiser, sem limites.</p>
 
                 <div class="badges">
@@ -216,6 +218,10 @@
                 </div>
             </div>
         </section> 
+
+  
+
+
         
         <section class="promo-cta" id="promo-cta">
             <div class="container promo-wrap">
@@ -238,31 +244,36 @@
             </div>
         </section>
         
+        <footer class="site-footer">
+            <div class="container footer-wrap">
+                <div class="footer-left">
+                    <div class="logo-footer"><i class="bi bi-controller"></i><span>GamePass Pro</span></div>
+                </div>
+    
+                <div class="footer-center">
+                    <p>GamePass Pro © Todos os Direitos Reservados – 2024</p>
+                    <p class="legal">CNPJ 00.000.000/0001-00 • <a href="#">Termos de Uso</a> • <a href="#">Política de Privacidade</a></p>
+                </div>
+    
+                <div class="footer-right">
+                    <a class="social" href="https://github.com/brunomariano0" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a class="social" href="https://www.linkedin.com/in/brunopaulomariano/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a class="social" href="https://www.instagram.com/brunomariano0/" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
         
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-wrap">
-            <div class="footer-left">
-                <div class="logo-footer"><i class="bi bi-controller"></i><span>GamePass Pro</span></div>
-            </div>
-
-            <div class="footer-center">
-                <p>GamePass Pro © Todos os Direitos Reservados – 2024</p>
-                <p class="legal">CNPJ 00.000.000/0001-00 • <a href="#">Termos de Uso</a> • <a href="#">Política de Privacidade</a></p>
-            </div>
-
-            <div class="footer-right">
-                <a class="social" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a class="social" href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
-                <a class="social" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="/js/questions.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/questions.js"></script>    
     <script src="/js/animations-smooth.js"></script>
+
+
+
+    
 </body>
 
 

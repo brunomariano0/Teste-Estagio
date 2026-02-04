@@ -19,11 +19,22 @@ body {
     font-family: Arial, sans-serif;    
     color: #ffffff;
     background-color: #0F1729;
+    padding-top: 80px;
+    
+}
+
+html {
+    scroll-behavior: smooth;
     
 }
 header { 
-    display: block;
-    text-align: center;
+  position: fixed;     
+  top: 0;              
+  left: 0;            
+  width: 100%;        
+  z-index: 9999;       
+  background-color: var(--cor-primaria);
+  box-shadow: 0 2px 5px rgba(8, 8, 8, 0.1); 
     
 } 
 header h1 {
@@ -49,7 +60,20 @@ nav {
     gap: 20px;
     text-align: center;
     margin: 0;
-} 
+}
+
+/* Mobile nav toggle base styles */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--cor-botao);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+}
+.nav-toggle:focus { outline: 2px solid rgba(0,225,255,0.18); outline-offset: 2px; }
 
 .links a:hover {
     color: var(--cor-botao);
@@ -82,6 +106,19 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .acess-game {margin-top: 30px;
+     padding: 20px;
+    }
+    .info-title h2 {font-size: 1.5rem; }
+    .info-title span { font-size: 2.2rem; line-height: 15px;}
+    
+    nav { justify-content: space-between; }
+    .links { display: none; }
+    .nav-toggle { display: block; margin-top: 15px; }
+    .contact-phone { display: none; }
 }
 
 
@@ -207,7 +244,8 @@ nav a {
 
 .form-card textarea {
      min-height: 110px;
-     resize: vertical; }
+     resize: vertical;
+}
 
 .form-card input::placeholder,
 .form-card textarea::placeholder {
@@ -304,9 +342,12 @@ nav a {
     .acess-game { grid-template-columns: 1fr; padding: 20px; }
     .form-group { align-items: center; padding: 0; }
     .form-card { width: 100%; max-width: 480px; }
-    /* Em telas pequenas, devolver .links ao fluxo do documento para evitar sobreposição */
-    nav { justify-content: center; }
-    .links { position: static; transform: none; margin: 0 auto; }
+    /* Mobile nav: hidden by default, toggled by button */
+    nav { justify-content: flex-start; position: relative; padding: 10px 20px; min-height: var(--nav-height); }
+    .nav-toggle { display: block; position: absolute; right: 20px; top: 14px; z-index:50; }
+    .links { position: absolute; left: 0; right: 0; top: var(--nav-height); transform: none; display: none; flex-direction: column; background: linear-gradient(180deg, rgba(12,20,30,0.98), rgba(6,12,18,0.98)); padding: 12px 16px; gap: 12px; z-index: 40; border-bottom: 1px solid rgba(255,255,255,0.03); }
+    .links.open { display: flex; }
+    .links a { padding: 8px 10px; display: block; border-radius: 8px; }
 }
 
 /* Serviços */
@@ -505,6 +546,8 @@ nav a {
     grid-template-columns: 1fr 520px;
     gap: 40px;
     align-items: center;
+    
+    
 }
 
 .promo-left h2 {
@@ -603,6 +646,9 @@ nav a {
      box-shadow: 0 12px 30px rgba(0,225,255,0.18), 0 0 0 rgba(0,225,255,0.08);
     }
 }
+
+
+
 
 /* efeito de 'piscar'*/
 
