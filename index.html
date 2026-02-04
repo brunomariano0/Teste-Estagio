@@ -12,18 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     
-    <title>Game Pass - O melhor jogo é o próximo</title>
+    <title>Game Pass Pro - O melhor jogo é o próximo</title>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
                 <i class="bi bi-controller"></i>
-                <h2>Game Pass</h2>                
+                <h2>Game Pass Pro</h2>
+                <div class="links">
+                    <a href="">Home</a>
+                    <a href="#about-us">Quem Somos</a>
+                    <a href="#services-content">Serviços</a>
+                    <a href="#questions">Dúvidas</a>
+                    <a href="#promo-cta">Assine Agora</a>
+                </div>           
             </div>
-            <div class="contact-phone">
-                <i class="bi bi-telephone-fill"></i>
-                <a href="">(11)99421-4921</a>
+            <div class="contact-phone">                
+                <a href="">Contato</a>
             </div>
         </nav>
     </header>
@@ -52,8 +58,9 @@
             
             <div class="form-group">
                 <div class="form-card" role="region" aria-label="Formulário de inscrição">
-                    <h3>Comece Agora</h3>
-                    <form action="#" method="get" novalidate>
+                    <h3>Assine o Game Pass Pro</h3>
+                    <form action="/backend/submit.php" method="post" id="subscribe-form" novalidate>
+                        <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
                         <label class="sr-only" for="name">Seu nome</label>
                         <input type="text" id="name" name="name" placeholder="Seu nome" required>
 
@@ -71,8 +78,191 @@
                 </div>
             </div>
         </section>
+
+        <section class="about-us" id="about-us">
+            <div class="about-image">
+                <img src="/assets/about.jpg" alt="Sobre o GamePass" />
+            </div>
+
+            <div class="about-content">
+                <h2>Quem Somos</h2>
+                <p>Somos apaixonados por games e criamos o serviço definitivo para gamers como você. Com o GamePass Pro, você tem acesso ilimitado aos melhores títulos do mercado, desde lançamentos AAA até indies incríveis.</p>
+
+                <p>Nossa missão é democratizar o acesso aos jogos, oferecendo uma experiência premium por um preço acessível. Junte-se a milhares de gamers que já fazem parte da nossa comunidade!</p>
+
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-num">50K+</div>
+                        <div class="stat-label">Assinantes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">98%</div>
+                        <div class="stat-label">Satisfação</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">4.9★</div>
+                        <div class="stat-label">Avaliação</div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <section class="services-content " id="services-content">
+            <div class="container services-wrap">
+                <div class="services-header">
+                    <h2>Com este serviço você:</h2>
+                    <p>Descubra todos os benefícios de ser um assinante GamePass Pro</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card" aria-labelledby="s1">
+                        <div class="service-icon"><i class="bi bi-controller"></i></div>
+                        <h3 id="s1">Catálogo Extenso</h3>
+                        <p>Mais de 500 jogos disponíveis incluindo lançamentos recentes, clássicos e títulos exclusivos.</p>
+                    </article>
+
+                    <article class="service-card" aria-labelledby="s2">
+                        <div class="service-icon"><i class="bi bi-download"></i></div>
+                        <h3 id="s2">Downloads Ilimitados</h3>
+                        <p>Baixe quantos jogos quiser, sem limites. Jogue offline quando preferir.</p>
+                    </article>
+
+                    <article class="service-card" aria-labelledby="s3">
+                        <div class="service-icon"><i class="bi bi-people-fill"></i></div>
+                        <h3 id="s3">Multiplayer Online</h3>
+                        <p>Jogue com amigos de qualquer lugar. Acesso completo às funcionalidades online.</p>
+                    </article>
+
+                    <article class="service-card" aria-labelledby="s4">
+                        <div class="service-icon"><i class="bi bi-clock-fill"></i></div>
+                        <h3 id="s4">Acesso Imediato</h3>
+                        <p>Comece a jogar em minutos após a assinatura. Sem espera, sem complicações.</p>
+                    </article>
+
+                    <article class="service-card" aria-labelledby="s5">
+                        <div class="service-icon"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h3 id="s5">Garantia de Satisfação</h3>
+                        <p>Não gostou? Devolvemos seu dinheiro nos primeiros 7 dias, sem perguntas.</p>
+                    </article>
+
+                    <article class="service-card" aria-labelledby="s6">
+                        <div class="service-icon"><i class="bi bi-lightning-fill"></i></div>
+                        <h3 id="s6">Atualizações Constantes</h3>
+                        <p>Novos jogos adicionados toda semana. O catálogo que cresce junto com você.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="questions" id="questions">
+            <div class="container faq-wrap">
+                <div class="faq-header">
+                    <h2>Perguntas Frequentes</h2>
+                    <p>Tire suas dúvidas sobre o GamePass Pro</p>
+                </div>
+                
+                <div class="faq-list" role="region" aria-label="Perguntas Frequentes">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="q1">
+                            <span>Como funciona o GamePass Pro?</span>
+                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq1" class="faq-panel" role="region" aria-labelledby="q1" hidden aria-hidden="true">
+                            <p>O GamePass Pro dá acesso a um catálogo de jogos mediante assinatura. Você pode jogar via download ou streaming conforme o título.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="q2">
+                            <span>Posso cancelar a qualquer momento?</span>
+                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq2" class="faq-panel" role="region" aria-labelledby="q2" hidden aria-hidden="true">
+                            <p>Sim. A assinatura é mensal e pode ser cancelada a qualquer momento através da sua conta, sem cobranças adicionais.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="q3">
+                            <span>Quais plataformas são suportadas?</span>
+                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq3" class="faq-panel" role="region" aria-labelledby="q3" hidden aria-hidden="true">
+                            <p>Suportamos PC, consoles populares e dispositivos móveis, dependendo do título. Consulte a página do jogo para detalhes de compatibilidade.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq4" id="q4">
+                            <span>Os jogos são atualizados constantemente?</span>
+                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq4" class="faq-panel" role="region" aria-labelledby="q4" hidden aria-hidden="true">
+                            <p>Sim. Adicionamos novos jogos e atualizações regularmente para manter o catálogo sempre atualizado e interessante.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq5" id="q5">
+                            <span>Preciso de internet para jogar?</span>
+                            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div id="faq5" class="faq-panel" role="region" aria-labelledby="q5" hidden aria-hidden="true">
+                            <p>Alguns jogos permitem download e jogo offline, outros (principalmente via streaming) exigem conexão. Verifique o modo de cada título.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section> 
+        
+        <section class="promo-cta" id="promo-cta">
+            <div class="container promo-wrap">
+                <div class="promo-left">
+                    <h2>
+                        <span class="promo-line1">Assine agora </span>
+                        <span class="promo-accent">E aproveite!</span>
+                    </h2>
+                    <p>Essa é sua chance de entrar para o melhor serviço de games do Brasil. Chegou até aqui e ainda não assinou? Aproveite agora!</p>
+                </div>
+    
+                <div class="promo-right">
+                    <div class="promo-card">
+                        <div class="badge-special">✨ Oferta Especial</div>
+                        <p class="promo-desc">Converse com nossa equipe sem compromisso. Não perca a chance de transformar sua experiência com games!</p>
+                        <button class="promo-cta-button">Quero Assinar Agora!</button>
+                        <div class="promo-note">Nossos especialistas vão entrar em contato com você ainda hoje.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
     </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <div class="footer-left">
+                <div class="logo-footer"><i class="bi bi-controller"></i><span>GamePass Pro</span></div>
+            </div>
+
+            <div class="footer-center">
+                <p>GamePass Pro © Todos os Direitos Reservados – 2024</p>
+                <p class="legal">CNPJ 00.000.000/0001-00 • <a href="#">Termos de Uso</a> • <a href="#">Política de Privacidade</a></p>
+            </div>
+
+            <div class="footer-right">
+                <a class="social" href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a class="social" href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                <a class="social" href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="/js/questions.js"></script>
+    <script src="/js/animations-smooth.js"></script>
 </body>
 
 
