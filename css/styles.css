@@ -47,6 +47,7 @@ nav {
     align-items: center; 
     padding: 0 20px;
     border-bottom: 1px solid var(--cor-botao);
+    
    
 } 
 
@@ -131,15 +132,12 @@ nav a {
     background-position: center;
     background: linear-gradient(40deg, rgba(15,23,41,0.85), rgba(6,12,18,0.9)), url(../assets/background.jpg);
     
-    display: grid;
-    grid-template-columns: 1fr 480px; 
-    gap: 40px;
-    text-align: left;
-    align-items: center; 
-    height: auto;
-    padding: 40px;
-    justify-content: center; 
-    overflow: visible;
+   display: flex;
+  justify-content: center; /* Alinha o grupo todo ao centro */
+  align-items: center;     /* Alinha verticalmente */
+  gap: 80px;               /* Define o espaço exato entre o texto e o formulário */
+  padding: 50px 20px;
+  min-height: 80vh;        /* Altura da seção */
 }
 
 
@@ -437,17 +435,103 @@ nav a {
     .service-card { padding: 18px; }
 }
 
+
+/* Preços */
+
+.precos {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: var(--cor-primaria);
+}
+
+.logo-precos i {
+  max-width: 200px;
+  margin-bottom: 20px;
+  
+}
+
+.precos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.card-preco {
+  flex: 1;
+  max-width: 350px;
+  min-width: 280px;
+  border: 1px solid #999; /* Cor da borda padrão */
+  padding: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cor de destaque (estilo Xbox) */
+.card-preco:hover, .card-preco.destaque {
+  border: 2px solid #97fd01; /* Verde Xbox */
+}
+
+.card-preco h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.valor {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.btn-selecionar {
+  background-color: #97fd01;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.btn-selecionar:hover {
+  filter: brightness(0.9);
+}
+
+.vantagens {
+  list-style: none;
+  padding: 0;
+}
+
+.vantagens li {
+  margin-bottom: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.vantagens li span {
+  color: #97fd01;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
 /* Perguntas Frequentes */
 
 .questions { 
-   max-width: 1100px;
-   margin: 60px auto 120px;
+   max-width: 100%;
+   
    padding: 40px 20px;
    text-align: center;
+   background: linear-gradient(80deg, rgba(8,14,22,0.85), rgba(7,11,18,0.75));
 }
 
 .faq-wrap .faq-header h2 {
-    color: var(--cor-botao);
+    color: white;
     font-weight: 800;
     font-size: 36px;
     margin-bottom: 8px;
@@ -542,11 +626,13 @@ nav a {
 }
 
 .promo-wrap {
-    display: grid;
-    grid-template-columns: 1fr 520px;
-    gap: 40px;
-    align-items: center;
-    
+
+    display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 350px;              
+  padding: 50px 20px;
+  min-height: 80vh;       
     
 }
 
@@ -561,17 +647,20 @@ nav a {
     display: block;
     color: #ffffff;
     margin-bottom: 25px;
+    font-size: 35px;
+    line-height: 0;
 }
 
 .promo-accent {
     display: block;
     color: var(--cor-botao);
-    font-size: 56px;
+    font-size: 35px;
 }
 
 .promo-left p {
     color: rgba(255,255,255,0.85);
-    max-width: 540px;
+    max-width: 350px;
+    font-size: 15px;
 }
 
 .promo-card {
@@ -581,6 +670,7 @@ nav a {
     border: 1px solid rgba(255,255,255,0.04);
     box-shadow: 0 30px 60px rgba(1,10,20,0.6);
     text-align: center;
+    max-width: 550px;
 }
 
 .badge-special {
