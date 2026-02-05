@@ -337,7 +337,7 @@ nav a {
 /* Responsivo */
 @media (max-width: 800px) {
     :root { --nav-height: 96px; }
-    .acess-game { grid-template-columns: 1fr; padding: 20px; }
+    .acess-game { display: flex; flex-direction: column; gap: 24px; padding: 20px; min-height: auto; align-items: center; }
     .form-group { align-items: center; padding: 0; }
     .form-card { width: 100%; max-width: 480px; }
     /* Mobile nav: hidden by default, toggled by button */
@@ -767,10 +767,13 @@ nav a {
 
 @media (max-width: 1000px) {
      .promo-wrap {
-         grid-template-columns: 1fr;
+         flex-direction: column;
+         gap: 20px;
+         padding: 30px 16px;
          text-align: center;
+         min-height: auto;
         }
-         .promo-left h2, .promo-accent {
+         .promo-left h2, .promo-left .promo-accent {
           font-size: 40px;
          }
           .promo-left { 
